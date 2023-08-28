@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soccer Juggle Counter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    #counter {
+      font-size: 36px;
+      margin: 20px;
+      color: #007bff;
+    }
+
+    #increaseBtn {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    #increaseBtn:hover {
+      background-color: #0056b3;
+    }
+
+    #video-container {
+      margin-top: 20px;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    .file-upload-label {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #28a745;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .file-upload-label:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Soccer Juggle Counter</h1>
+    <div id="video-container">
+      <form action="http://127.0.0.1:5000/upload" method="POST" enctype="multipart/form-data">
+        <label class="file-upload-label" for="videoInput">Upload .MOV File</label>
+        <input type="file" id="videoInput" name="videoFile" accept=".mov">
+        <input type="submit" value="Upload">
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
